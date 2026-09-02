@@ -33,6 +33,20 @@
   src:url("fonts/CMUSerif-Bold.woff2") format("woff2");
 }
 @font-face{
+  font-family:"CMU Sans";
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+  src:url("fonts/CMUSans-Regular.woff2") format("woff2");
+}
+@font-face{
+  font-family:"CMU Sans";
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+  src:url("fonts/CMUSans-Bold.woff2") format("woff2");
+}
+@font-face{
   font-family:"CMU Typewriter";
   font-style:normal;
   font-weight:400;
@@ -52,8 +66,8 @@
      bright core, and the mint-teal of the star clusters. */
   --bg:        #08061b;   /* deep indigo — the darkest part of the photo  */
   --fg:        #e9e9dd;   /* cream — the bright core of the nebula        */
-  --dim:       #9aa0b6;   /* pale blue-grey (author lists, blurbs)        */
-  --faint:     #757a94;   /* tertiary text (venues, dates, captions)      */
+  --dim:       #c6cad9;   /* secondary text — author lists, blurbs        */
+  --faint:     #9aa0b6;   /* tertiary text — venues, dates, captions      */
   --accent:    #9c8fd6;   /* periwinkle — links, chips, repo names        */
   --accent-2:  #63a89c;   /* mint-teal — the dotted dividers              */
   --fill:      #100e26;   /* filled blocks                                */
@@ -64,14 +78,22 @@
   --serif:      "CMU Serif", "Computer Modern", Georgia, serif;
   --typewriter: "CMU Typewriter", "CMU Typewriter Text", ui-monospace, Menlo, monospace;
 
-  --size-body:      17px;   /* body text                              */
+  /* Computer Modern's hairlines are thin on a dark ground. If the serif
+     still reads too faint for you, comment out the --serif line above and
+     uncomment this one — the whole page switches to CMU Sans, which is the
+     same type family with more weight on screen. Everything else stays. */
+  /* --serif:  "CMU Sans", "CMU Sans Serif", ui-sans-serif, system-ui, sans-serif; */
+
+  --size-body:      18px;   /* body text                              */
   --size-name:      44px;   /* your name in the header                */
   --size-section:   30px;   /* RESEARCH / PUBLICATIONS / ... headings  */
   --size-item:      19px;   /* research + teaching titles             */
   --size-paper:     18px;   /* publication titles                     */
 
   /* --- layout --- */
-  --page-width:  820px;   /* how wide the text column runs            */
+  --page-width: 1280px;   /* how wide the page runs — raise or lower   */
+  --label-width: 240px;   /* the section-heading column on the left    */
+  --text-width:   76ch;   /* longest a line of prose is allowed to be  */
   --gap-section:  38px;   /* space above and below a dotted divider   */
   --photo-width: 210px;   /* portrait size; height follows below      */
 }
@@ -103,19 +125,25 @@ a{ color:inherit; text-decoration:none; }
   padding:30px 34px 90px;
 }
 
-/* Every section after the first is preceded by the dotted divider. */
+/* Every section is preceded by the dotted divider, and lays its heading
+   in a column on the left with the content beside it. */
 .section{
   border-top:2px dotted var(--accent-2);
   padding-top:var(--gap-section);
   margin-top:var(--gap-section);
+  display:grid;
+  grid-template-columns:var(--label-width) minmax(0,1fr);
+  column-gap:44px;
 }
+.section > h2{ grid-column:1; grid-row:1; }
+.section > *:not(h2){ grid-column:2; }
 
 /* The large bold section headings. */
 .section h2{
   font-size:var(--size-section);
   font-weight:700;
   line-height:1.2;
-  margin:0 0 22px;
+  margin:0;
 }
 
 
@@ -144,6 +172,7 @@ a{ color:inherit; text-decoration:none; }
   display:flex;
   gap:38px;
   align-items:flex-start;
+  justify-content:space-between;
 }
 
 .header .identity{
@@ -180,8 +209,8 @@ a{ color:inherit; text-decoration:none; }
 .contact a:hover{ color:var(--fg); }
 
 .bio{
-  color:var(--dim);
-  max-width:58ch;
+  color:var(--fg);
+  max-width:64ch;
   margin:6px 0 0;
 }
 .bio strong{ color:var(--fg); font-weight:700; }
@@ -259,7 +288,8 @@ a{ color:inherit; text-decoration:none; }
   font-weight:700;
   line-height:1.4;
 }
-.paper .authors{ color:var(--dim); font-size:16px; }
+.paper .title{ max-width:var(--text-width); }
+.paper .authors{ color:var(--dim); font-size:16.5px; }
 .paper .authors strong{ color:var(--fg); font-weight:700; }   /* your name */
 .paper .venue{
   font-family:var(--typewriter);
@@ -302,6 +332,7 @@ a{ color:inherit; text-decoration:none; }
   align-items:baseline;
   color:var(--dim);
 }
+.code-list li span{ max-width:var(--text-width); }
 .code-list .repo{
   font-family:var(--typewriter);
   font-size:15.5px;
@@ -331,9 +362,11 @@ a{ color:inherit; text-decoration:none; }
   font-weight:700;
   display:block;
 }
+.activity-list .role{ max-width:var(--text-width); }
 .activity-list .detail{
   color:var(--dim);
   display:block;
+  max-width:var(--text-width);
 }
 .activity-list .when{
   font-family:var(--typewriter);
@@ -369,6 +402,10 @@ a{ color:inherit; text-decoration:none; }
     --page-width:100%;
   }
   .page{ padding:24px 20px 70px; }
+  :root{ --text-width:100%; }
+  .section{ grid-template-columns:1fr; }
+  .section > h2{ grid-column:1; grid-row:auto; margin-bottom:18px; }
+  .section > *:not(h2){ grid-column:1; }
   .header{ flex-direction:column-reverse; gap:22px; }
   .header .portrait{ width:150px; }
   .topnav{ justify-content:flex-start; gap:16px; font-size:15.5px; }
