@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ===================================================================
+     EDIT: the browser tab title and the one-line description search
+     engines show.
+     =================================================================== -->
+<title>Joann Jones</title>
+<meta name="description" content="Joann Jones — PhD student in astronomy and astrophysics. Evolving dark energy, large-scale structure, and the CMB.">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="page">
+
+
+<!-- ===================================================================
+     NAVIGATION
+     These jump to the sections further down. If you delete a section,
+     delete its link here too.
+     =================================================================== -->
+<nav class="topnav">
+  <a href="#research">research</a>
+  <a href="#publications">publications</a>
+  <a href="#talks">talks</a>
+  <a href="#code">code</a>
+  <a href="#teaching">teaching</a>
+  <a href="cv.pdf">cv</a>
+</nav>
+
+
+<!-- ===================================================================
+     HEADER — photo, name, affiliation, contact, short bio
+     =================================================================== -->
+<header class="header">
+
+  <div class="identity">
+
+    <h1 class="name">Joann Jones</h1>
+
+    <!-- EDIT: department, institution, city. Add or remove <div> lines
+         freely; they just stack. -->
+    <div class="affiliation">
+      <div>Department of Astronomy &amp; Astrophysics</div>
+      <div>University of Chicago</div>
+      <div>Chicago, IL</div>
+    </div>
+
+    <!-- EDIT: contact links. Email needs the mailto: prefix. To remove
+         one, delete the <a> and the <span class="sep">·</span> next to it. -->
+    <div class="contact">
+      <a href="mailto:joannjones@uchicago.edu">joannjones@uchicago.edu</a>
+      <span class="sep">·</span>
+      <a href="https://github.com/joannjones415">github</a>
+      <span class="sep">·</span>
+      <a href="https://orcid.org/0009-0001-8586-5956">orcid</a>
+      <span class="sep">·</span>
+      <a href="cv.pdf">cv</a>
+    </div>
+
+    <!-- EDIT: two or three sentences. Wrap anything you want brighter
+         in <strong>…</strong>. -->
+    <p class="bio">
+      I'm a PhD student working at the intersection of theoretical and observational cosmology.
+       Advised by Josh Frieman and Scott Dodelson, I study
+      <strong>evolving dark energy models</strong> and the growth of <strong>large-scale structure</strong>
+       using the cosmic microwave background, galaxy surveys, and supernovae. I am also interested in the
+       statistical properties of the <strong>anomalies in the CMB</strong> and their implications for cosmology.
+    </p>
+
+  </div>
+
+  <!-- EDIT: replace images/photo.jpg to change the picture.
+       The width is set by --photo-width in style.css. -->
+  <div class="portrait">
+    <img src="images/photo.jpg" alt="Joann Jones">
+  </div>
+
+</header>
+
+
+<!-- ===================================================================
+     RESEARCH — titles only
+     To add a topic, copy one <li> line.
+     =================================================================== -->
+<section class="section" id="research">
+  <h2>Research</h2>
+
+  <ul class="topic-list">
+    <li>Constraints on a broad class of thawing quintessence dark energy models</li>
+    <li>Growth of structure versus geometry: the CMB and DES Y6</li>
+    <li>Uncorrelated anomalies in the CMB</li>
+  </ul>
+
+</section>
+
+
+<!-- ===================================================================
+     PUBLICATIONS
+
+     Structure: one .year-block per year. Inside it, the left <div> holds
+     the papers and the right <div class="year"> holds the numeral.
+
+     The first block uses class="year label" instead, which puts the
+     words "in preparation" in the numeral's slot at a smaller size.
+
+     To add a paper, copy one whole <div class="paper"> … </div> block.
+     To add a year, copy one whole <div class="year-block"> … </div>.
+     Put newest first.
+
+     Inside .authors, wrap your own name in <strong>…</strong>.
+     Inside .links, delete any chip you don't have a link for.
+     =================================================================== -->
+<section class="section" id="publications">
+  <h2>Publications</h2>
+
+  <!-- -------------------------- in preparation ------------------------ -->
+  <div class="year-block">
+    <div>
+
+      <div class="paper">
+        <span class="title">Constraints on a broad class of thawing quintessence dark energy models</span>
+        <span class="authors"><strong>J. Jones</strong>, J. Frieman, A. Shajib</span>
+        <span class="venue">coming very soon...</span>
+      </div>
+
+      <div class="paper">
+        <span class="title">Growth of structure versus geometry: the CMB and DES Y6</span>
+        <span class="authors"><strong>J. Jones</strong>, S. Dodelson, U. de Andrade Uchoa</span>
+        <span class="venue">coming very soon...</span>
+      </div>
+
+    </div>
+    <div class="year label">coming very soon...p</div>
+  </div>
+
+  <!-- ------------------------------ 2023 ------------------------------ -->
+  <div class="year-block">
+    <div>
+
+      <div class="paper">
+        <span class="title">Strong evidence against a statistically isotropic universe</span>
+        <span class="authors"><strong>J. Jones</strong>, C. J. Copi, G. D. Starkman, Y. Akrami</span>
+        <span class="venue">arXiv:2310.12859 &nbsp;·&nbsp;</span>
+        <span class="links">
+          <a href="https://arxiv.org/abs/2310.12859">arXiv</a>
+          <a href="https://arxiv.org/pdf/2310.12859">pdf</a>
+          <a href="https://ui.adsabs.harvard.edu/abs/arXiv:2310.12859">ads</a>
+        </span>
+      </div>
+
+    </div>
+    <div class="year">2023</div>
+  </div>
+
+</section>
+
+
+<!-- ===================================================================
+     TALKS & POSTERS
+     Each entry: title, then venue, then format and date.
+     To add one, copy a whole <li> … </li> block. Newest first.
+     Delete this whole <section> (and its nav link) if you don't want it.
+     =================================================================== -->
+<section class="section" id="talks">
+  <h2>Talks &amp; Posters</h2>
+
+  <ul class="activity-list">
+
+    <li>
+      <span class="role">Constraining thawing quintessence dark energy models with LSST supernova data</span>
+      <span class="detail">University of Arizona Multiprobe Cosmology Winter School</span>
+      <span class="when">Poster &nbsp;·&nbsp; January 2026</span>
+    </li>
+
+    <li>
+      <span class="role">Constraining evolving and spatially varying dark energy</span>
+      <span class="detail">COSMO 2025, Carnegie Mellon University</span>
+      <span class="when">Poster &nbsp;·&nbsp; October 2025</span>
+    </li>
+    <li>
+      <span class="role">Strong evidence against a statistically isotropic universe</span>
+      <span class="detail">Intersections, Case Western Reserve University</span>
+      <span class="when">Poster &nbsp;·&nbsp; May 2024</span>
+    </li>
+    <li>
+      <span class="role">Detecting precipitation bands observed by SAMPEX using power spectral density and a self-organizing map</span>
+      <span class="detail">241st AAS Meeting</span>
+      <span class="when">Poster &nbsp;·&nbsp; January 2023</span>
+    </li>
+    <li>
+      <span class="role">Using machine learning to understand relativistic electron precipitation</span>
+      <span class="detail">CUWiP, Brown University</span>
+      <span class="when">Talk &nbsp;·&nbsp; January 2023</span>
+    </li>
+
+    <li>
+      <span class="role">Detecting precipitation bands observed by SAMPEX using power spectral density and a self-organizing map</span>
+      <span class="detail">241st AAS Meeting</span>
+      <span class="when">Poster &nbsp;·&nbsp; January 2023</span>
+    </li>
+
+  </ul>
+
+</section>
+
+
+<!-- ===================================================================
+     CODE
+     To add a repository, copy one <li> … </li> block.
+     =================================================================== -->
+<section class="section" id="code">
+  <h2>Code</h2>
+
+  <ul class="code-list">
+
+    <li>
+      <a class="repo" href="https://joannjones415.github.io/cmb-lensing-visualizer/">cmb-lensing-visualizer</a>
+      <span>Deform the CMB lensing potential by an amplitude A<sub>L</sub>, or by
+      the first two lensing principal components, independently of the cosmology
+      that generated it, and watch the lensed TT spectrum and its residuals
+      respond.</span>
+    </li>
+
+    <!-- Template for another repository — copy the block above, or
+         uncomment and fill this one in when the code goes public.
+
+    <li>
+      <a class="repo" href="https://github.com/joannjones415/REPO-NAME">repo-name</a>
+      <span>One line on what it does.</span>
+    </li>
+
+    -->
+
+  </ul>
+
+</section>
+
+
+<!-- ===================================================================
+     TEACHING & OUTREACH
+     Each entry has a bold role, a detail line, and a date line.
+     Delete the .detail or .when line if you don't need it.
+     =================================================================== -->
+<section class="section" id="teaching">
+  <h2>Teaching &amp; Outreach</h2>
+
+  <ul class="activity-list">
+
+    <li>
+      <span class="role">Community Engagement Group</span>
+      <span class="detail">Led an effort that raised over $3,000 for food banks in the surrounding community.</span>
+      <span class="when">September 2025 &ndash; present</span>
+    </li>
+
+    <li>
+      <span class="role">Teaching assistant — The Big Bang</span>
+      <span class="detail">Introductory cosmology. Two weekly lab sections, weekly office hours, monthly lectures, and grading.</span>
+      <span class="when">March &ndash; June 2025</span>
+    </li>
+
+    <li>
+      <span class="role">Teaching assistant — Stars</span>
+      <span class="detail">Introductory course on the formation and evolution of stars. Two weekly lab sections, review sessions, and office hours.</span>
+      <span class="when">September &ndash; December 2024</span>
+    </li>
+
+    <li>
+      <span class="role">NASA Partner Eclipse Ambassador</span>
+      <span class="detail">Astronomical Society of the Pacific. Coordinated outreach events with under-served communities ahead of the total eclipse.</span>
+      <span class="when">October 2022 &ndash; April 2024</span>
+    </li>
+
+    <li>
+      <span class="role">Astronomy educator</span>
+      <span class="detail">Taught a summer camp course on dark matter, planets, stars, black holes, and galaxies.</span>
+      <span class="when">Summer 2022</span>
+    </li>
+
+  </ul>
+
+</section>
+
+
+<!-- ===================================================================
+     FOOTER
+     =================================================================== -->
+<footer class="footer">
+  Last updated September 2026 &nbsp;·&nbsp; Set in Computer Modern
+</footer>
+
+
+</div>
+</body>
+</html>

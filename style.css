@@ -1,0 +1,384 @@
+/* =====================================================================
+   style.css — Joann Jones
+   ---------------------------------------------------------------------
+   Everything you are likely to want to change lives in the :root block
+   just below. Colours, sizes and spacing are all named variables, so you
+   can retune the whole page from one place without hunting through the
+   file.
+
+   Sections further down are labelled to match the sections in
+   index.html, in the same order.
+   ===================================================================== */
+
+
+/* ---------------------------------------------------------------------
+   1. FONTS
+   The three CMU (Computer Modern Unicode) files live in fonts/.
+   Roman = body text, Bold = emphasis and headings,
+   Typewriter = links, labels, code names, arXiv IDs.
+   --------------------------------------------------------------------- */
+
+@font-face{
+  font-family:"CMU Serif";
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+  src:url("fonts/CMUSerif-Roman.woff2") format("woff2");
+}
+@font-face{
+  font-family:"CMU Serif";
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+  src:url("fonts/CMUSerif-Bold.woff2") format("woff2");
+}
+@font-face{
+  font-family:"CMU Typewriter";
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+  src:url("fonts/CMUTypewriter-Regular.woff2") format("woff2");
+}
+
+
+/* ---------------------------------------------------------------------
+   2. THE DIALS — change these, not the rules below
+   --------------------------------------------------------------------- */
+
+:root{
+  /* --- colour ---
+     Sampled from the photo in the header: the deep indigo behind the
+     nebula, the periwinkle haze, the pale blue-grey, the cream of the
+     bright core, and the mint-teal of the star clusters. */
+  --bg:        #08061b;   /* deep indigo — the darkest part of the photo  */
+  --fg:        #e9e9dd;   /* cream — the bright core of the nebula        */
+  --dim:       #9aa0b6;   /* pale blue-grey (author lists, blurbs)        */
+  --faint:     #757a94;   /* tertiary text (venues, dates, captions)      */
+  --accent:    #9c8fd6;   /* periwinkle — links, chips, repo names        */
+  --accent-2:  #63a89c;   /* mint-teal — the dotted dividers              */
+  --fill:      #100e26;   /* filled blocks                                */
+  --fill-2:    #171433;   /* filled chips                                 */
+  --ghost:     #221a41;   /* the big year numerals in publications        */
+
+  /* --- type --- */
+  --serif:      "CMU Serif", "Computer Modern", Georgia, serif;
+  --typewriter: "CMU Typewriter", "CMU Typewriter Text", ui-monospace, Menlo, monospace;
+
+  --size-body:      17px;   /* body text                              */
+  --size-name:      44px;   /* your name in the header                */
+  --size-section:   30px;   /* RESEARCH / PUBLICATIONS / ... headings  */
+  --size-item:      19px;   /* research + teaching titles             */
+  --size-paper:     18px;   /* publication titles                     */
+
+  /* --- layout --- */
+  --page-width:  820px;   /* how wide the text column runs            */
+  --gap-section:  38px;   /* space above and below a dotted divider   */
+  --photo-width: 210px;   /* portrait size; height follows below      */
+}
+
+
+/* ---------------------------------------------------------------------
+   3. PAGE FRAME
+   --------------------------------------------------------------------- */
+
+*{ box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:var(--serif);
+  font-size:var(--size-body);
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{ color:inherit; text-decoration:none; }
+
+.page{
+  max-width:var(--page-width);
+  margin:0 auto;
+  padding:30px 34px 90px;
+}
+
+/* Every section after the first is preceded by the dotted divider. */
+.section{
+  border-top:2px dotted var(--accent-2);
+  padding-top:var(--gap-section);
+  margin-top:var(--gap-section);
+}
+
+/* The large bold section headings. */
+.section h2{
+  font-size:var(--size-section);
+  font-weight:700;
+  line-height:1.2;
+  margin:0 0 22px;
+}
+
+
+/* ---------------------------------------------------------------------
+   4. TOP NAVIGATION
+   --------------------------------------------------------------------- */
+
+.topnav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:22px;
+  font-size:16.5px;
+  color:var(--dim);
+  margin-bottom:34px;
+}
+.topnav a:hover{ color:var(--fg); }
+.topnav a.current{ color:var(--accent); font-weight:700; }
+
+
+/* ---------------------------------------------------------------------
+   5. HEADER — photo, name, affiliation, contact
+   --------------------------------------------------------------------- */
+
+.header{
+  display:flex;
+  gap:38px;
+  align-items:flex-start;
+}
+
+.header .identity{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  min-width:0;
+}
+
+.header .name{
+  font-size:var(--size-name);
+  font-weight:700;          /* whole name bold */
+  line-height:1.05;
+  margin:0;
+}
+
+/* Department / institution / city, stacked under the name. */
+.affiliation{
+  color:var(--dim);
+  line-height:1.5;
+}
+.affiliation div{ display:block; }
+
+/* The single row of contact links. */
+.contact{
+  font-family:var(--typewriter);
+  font-size:15px;
+  color:var(--accent);
+  display:flex;
+  flex-wrap:wrap;
+  gap:4px 10px;
+}
+.contact .sep{ color:var(--faint); }
+.contact a:hover{ color:var(--fg); }
+
+.bio{
+  color:var(--dim);
+  max-width:58ch;
+  margin:6px 0 0;
+}
+.bio strong{ color:var(--fg); font-weight:700; }
+
+.header .portrait{
+  width:var(--photo-width);
+  flex:none;
+}
+.header .portrait img{
+  width:100%;
+  height:auto;
+  display:block;
+  background:var(--fill-2);
+}
+
+
+/* ---------------------------------------------------------------------
+   6. RESEARCH — titles only
+   --------------------------------------------------------------------- */
+
+.topic-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:13px;
+}
+.topic-list li{
+  font-size:var(--size-item);
+  font-weight:700;
+}
+
+
+/* ---------------------------------------------------------------------
+   7. PUBLICATIONS
+   Each year is its own block. The big faint numeral on the right is the
+   year marker — it stands in for a heading, so nothing else is needed.
+   --------------------------------------------------------------------- */
+
+.year-block{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 100px;
+  gap:26px;
+  margin-bottom:38px;
+}
+.year-block:last-child{ margin-bottom:0; }
+
+.year-block .year{
+  font-size:46px;
+  font-weight:700;
+  line-height:1;
+  text-align:right;
+  color:var(--ghost);
+  font-variant-numeric:tabular-nums;
+}
+
+/* Papers with no year yet (in preparation) put a word in the same slot
+   instead of a numeral — add class="year label" to that div. */
+.year-block .year.label{
+  font-size:20px;
+  line-height:1.35;
+}
+
+.paper{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  margin-bottom:24px;
+}
+.paper:last-child{ margin-bottom:0; }
+
+.paper .title{
+  font-size:var(--size-paper);
+  font-weight:700;
+  line-height:1.4;
+}
+.paper .authors{ color:var(--dim); font-size:16px; }
+.paper .authors strong{ color:var(--fg); font-weight:700; }   /* your name */
+.paper .venue{
+  font-family:var(--typewriter);
+  font-size:14.5px;
+  color:var(--faint);
+}
+
+/* The small filled link chips: arXiv, pdf, bib, code. */
+.links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:7px;
+}
+.links a{
+  font-family:var(--typewriter);
+  font-size:13px;
+  color:var(--accent);
+  background:var(--fill-2);
+  padding:4px 11px;
+}
+.links a:hover{ background:var(--accent); color:var(--bg); }
+
+
+/* ---------------------------------------------------------------------
+   8. CODE
+   --------------------------------------------------------------------- */
+
+.code-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:13px;
+}
+.code-list li{
+  display:flex;
+  gap:15px;
+  align-items:baseline;
+  color:var(--dim);
+}
+.code-list .repo{
+  font-family:var(--typewriter);
+  font-size:15.5px;
+  font-weight:700;
+  color:var(--accent);
+  flex:none;
+}
+@media (max-width:560px){
+  .code-list li{ flex-direction:column; gap:2px; }
+}
+
+
+/* ---------------------------------------------------------------------
+   9. TEACHING & OUTREACH
+   --------------------------------------------------------------------- */
+
+.activity-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+.activity-list .role{
+  font-size:var(--size-item);
+  font-weight:700;
+  display:block;
+}
+.activity-list .detail{
+  color:var(--dim);
+  display:block;
+}
+.activity-list .when{
+  font-family:var(--typewriter);
+  font-size:14px;
+  color:var(--faint);
+  display:block;
+  margin-top:2px;
+}
+
+
+/* ---------------------------------------------------------------------
+   10. FOOTER
+   --------------------------------------------------------------------- */
+
+.footer{
+  font-family:var(--typewriter);
+  font-size:13.5px;
+  color:var(--faint);
+  border-top:2px dotted var(--accent-2);
+  padding-top:20px;
+  margin-top:var(--gap-section);
+}
+
+
+/* ---------------------------------------------------------------------
+   11. SMALL SCREENS
+   --------------------------------------------------------------------- */
+
+@media (max-width:680px){
+  :root{
+    --size-name:34px;
+    --size-section:25px;
+    --page-width:100%;
+  }
+  .page{ padding:24px 20px 70px; }
+  .header{ flex-direction:column-reverse; gap:22px; }
+  .header .portrait{ width:150px; }
+  .topnav{ justify-content:flex-start; gap:16px; font-size:15.5px; }
+  .year-block{ grid-template-columns:1fr; gap:6px; }
+  .year-block .year{ text-align:left; font-size:34px; }
+}
+
+
+/* Respect a reduced-motion preference. */
+@media (prefers-reduced-motion:reduce){
+  html{ scroll-behavior:auto; }
+  *{ transition:none !important; animation:none !important; }
+}
