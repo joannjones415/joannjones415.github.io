@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research · Joann Jones</title>
+<meta name="description" content="Joann Jones, PhD student in astronomy and astrophysics at the University of Chicago. Evolving dark energy, large-scale structure, and the CMB.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap">
+    <nav class="topnav">
+      <span class="id"><a class="home" href="index.html">Joann Jones</a><a class="email" href="mailto:joannjones@uchicago.edu">joannjones@uchicago.edu</a></span>
+      <a href="about.html">about</a>
+      <a href="research.html" aria-current="page">research</a>
+      <a href="publications.html">publications &amp; talks</a>
+      <a href="outreach.html">outreach</a>
+      <a href="cv.pdf">cv</a>
+    </nav>
+  </div>
+</div>
+
+<header class="sky band">
+  <div class="wrap">
+    <h1 class="page-title">Research</h1>
+    <div style="height:30px"></div>
+  </div>
+</header>
+
+<main class="wrap">
+<div class="cards">
+  <article class="card">
+    <h3>Constraints on a broad class of physically motivated dynamical dark energy models</h3>
+    <p class="summary">Most evidence for evolving dark energy comes from fits to the w<sub>0</sub>w<sub>a</sub>
+    parameterization, which is hard to connect to physics. I constrain the simplest physically motivated models
+    of dynamical dark energy, in which a slowly rolling scalar field drives cosmic acceleration, with DES Y6 3×2pt, DESI DR2 BAO, the DES-Dovekie
+    supernovae, and CMB data from Planck, ACT, and SPT. A modified CAMB integrates the model's background and
+    perturbations directly.</p>
+    <p class="meta">Advised by J. Frieman, with A. Shajib · UChicago · 2024–present</p>
+    <ul class="outputs">
+      <li><span class="kind">paper</span><span>In preparation</span></li>
+      <li><span class="kind">poster</span><span>Multiprobe Cosmology Winter School, University of Arizona, January 2026</span></li>
+      <li><span class="kind">poster</span><span>COSMO 2025, Carnegie Mellon University, October 2025</span></li>
+    </ul>
+  </article>
+  <article class="card">
+    <h3>The S<sub>8</sub> tension through a different lens</h3>
+    <p class="summary">The CMB measures clustering at two epochs: at recombination through the primary anisotropies,
+    and near z&nbsp;≈&nbsp;2 through lensing. A single CMB value of S<sub>8</sub> mixes the two. I marginalize
+    over lensing with a few principal components of the lensing power spectrum, so that Planck, ACT, and SPT
+    give S<sub>8</sub> from recombination alone, and I compare it with DES Y6 and with the CMB lensing
+    reconstruction.</p>
+    <p class="meta">Advised by S. Dodelson, with U. de Andrade Uchoa · UChicago · 2025–present</p>
+    <ul class="outputs">
+      <li><span class="kind">paper</span><span>In preparation</span></li>
+      <li><span class="kind">code</span><span><a class="inline-link" href="https://joannjones415.github.io/cmb-lensing-visualizer/">cmb-lensing-visualizer</a>, which shows what the lensing principal components do to the CMB spectrum (<a class="inline-link" href="https://github.com/joannjones415/cmb-lensing-visualizer">source</a>)</span></li>
+    </ul>
+  </article>
+  <article class="card">
+    <h3>Uncorrelated anomalies in the CMB</h3>
+    <p class="summary">The CMB shows several anomalies on large angular scales. Using simulated ΛCDM skies, I showed
+    that they are close to uncorrelated with one another, so their probabilities multiply. Together they give
+    a p-value of about 3&thinsp;×&thinsp;10<sup>−8</sup>, more than a 5σ departure from ΛCDM.</p>
+    <p class="meta">Advised by G. D. Starkman and C. J. Copi, with Y. Akrami · CWRU · 2023–present</p>
+    <ul class="outputs">
+      <li><span class="kind">paper</span><span><a class="inline-link" href="https://arxiv.org/abs/2310.12859">Strong evidence against a statistically isotropic universe</a>, arXiv:2310.12859</span></li>
+      <li><span class="kind">poster</span><span>Intersections, Case Western Reserve University, May 2024</span></li>
+    </ul>
+  </article>
+</div>
+
+<h2 class="group">Previous projects</h2>
+<div class="cards two">
+  <article class="card">
+    <h3>Machine learning for relativistic electron precipitation</h3>
+    <p class="summary">I developed an unsupervised machine learning method to find relativistic electron precipitation bands
+         in years of SAMPEX electron count data. It combines power spectral density with a self-organizing map, a
+         competitive neural network, to catalog the band events automatically.</p>
+    <p class="meta">Advised by S. Vidal-Luengo and L. Blum · LASP, CU Boulder · summer 2022</p>
+    <ul class="outputs">
+      <li><span class="kind">talk</span><span>CUWiP, Brown University, January 2023</span></li>
+      <li><span class="kind">poster</span><span>241st AAS Meeting, January 2023</span></li>
+    </ul>
+  </article>
+  <article class="card">
+    <h3>Macroscopic dark matter search</h3>
+    <p class="summary">I tested machine learning methods for image classification in a citizen science project that
+         connects the search for macroscopic dark matter with public outreach.</p>
+    <p class="meta">Advised by G. D. Starkman · CWRU · 2022–2023</p>
+
+  </article>
+</div>
+
+<h2 class="group">Code</h2>
+<div class="cards">
+  <article class="card">
+    <h3><a href="https://joannjones415.github.io/cmb-lensing-visualizer/">cmb-lensing-visualizer</a></h3>
+    <p class="summary">Deform the CMB lensing potential by an amplitude A<sub>L</sub>, or by the first two lensing principal
+         components, independently of the cosmology that generated it, and watch the lensed TT spectrum and its
+         residuals respond.</p>
+    <p class="meta">Runs in the browser · <a class="inline-link" href="https://github.com/joannjones415/cmb-lensing-visualizer">source on GitHub</a></p>
+
+  </article>
+  <article class="card">
+    <h3>cmb-anomaly-correlations</h3>
+    <p class="summary">Computes four large-angle anomaly statistics on the Planck 2018 temperature maps and on ΛCDM
+         realizations, and turns them into individual and joint p-values. It reproduces the analysis in
+         arXiv:2310.12859.</p>
+    <p class="meta">Python · coming soon</p>
+
+  </article>
+  <article class="card">
+    <h3>thawing-models</h3>
+    <p class="meta">coming soon</p>
+
+  </article>
+</div>
+
+</main>
+
+<div class="wrap"><footer class="footer">Last updated September 2026 · Set in Computer Modern</footer></div>
+</body>
+</html>

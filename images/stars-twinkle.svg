@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520">
+  <style>.t{animation-name:tw;animation-timing-function:ease-in-out;animation-iteration-count:infinite}@keyframes tw{50%{opacity:.08}}</style>
+  <circle cx="291" cy="78" r="1.2" fill="#ffffff" opacity="0.35" class="t" style="animation-duration:7.2s;animation-delay:-0.8s"/>
+  <circle cx="525" cy="473" r="0.6" fill="#ffffff" opacity="0.35"/>
+  <circle cx="82" cy="221" r="1.0" fill="#ffffff" opacity="0.35"/>
+  <circle cx="56" cy="304" r="0.5" fill="#ffffff" opacity="0.5" class="t" style="animation-duration:6.0s;animation-delay:-1.1s"/>
+  <circle cx="377" cy="281" r="1.0" fill="#dfe2ee" opacity="0.7"/>
+  <circle cx="523" cy="332" r="0.7" fill="#dfe2ee" opacity="0.35"/>
+  <circle cx="557" cy="258" r="1.0" fill="#f4f4ee" opacity="0.9" class="t" style="animation-duration:5.6s;animation-delay:-7.4s"/>
+  <circle cx="325" cy="129" r="0.6" fill="#ffffff" opacity="0.5"/>
+  <circle cx="788" cy="379" r="0.7" fill="#ffffff" opacity="0.35"/>
+  <circle cx="308" cy="485" r="0.8" fill="#dfe2ee" opacity="0.35" class="t" style="animation-duration:3.8s;animation-delay:-4.5s"/>
+  <circle cx="710" cy="426" r="0.7" fill="#dfe2ee" opacity="0.7"/>
+  <circle cx="62" cy="49" r="0.7" fill="#dfe2ee" opacity="0.9"/>
+  <circle cx="631" cy="337" r="1.2" fill="#f4f4ee" opacity="0.9" class="t" style="animation-duration:6.7s;animation-delay:-7.1s"/>
+  <circle cx="312" cy="489" r="0.7" fill="#dfe2ee" opacity="0.5"/>
+  <circle cx="691" cy="67" r="0.6" fill="#f4f4ee" opacity="0.9"/>
+  <circle cx="150" cy="209" r="0.7" fill="#f4f4ee" opacity="0.5" class="t" style="animation-duration:7.4s;animation-delay:-2.2s"/>
+  <circle cx="374" cy="187" r="0.8" fill="#ffffff" opacity="0.5"/>
+  <circle cx="593" cy="6" r="1.0" fill="#f4f4ee" opacity="0.5"/>
+  <circle cx="481" cy="317" r="0.7" fill="#dfe2ee" opacity="0.5" class="t" style="animation-duration:7.4s;animation-delay:-7.6s"/>
+  <circle cx="589" cy="385" r="0.8" fill="#f4f4ee" opacity="0.9"/>
+  <circle cx="571" cy="32" r="0.5" fill="#f4f4ee" opacity="0.5"/>
+  <circle cx="47" cy="0" r="0.6" fill="#f4f4ee" opacity="0.35" class="t" style="animation-duration:6.3s;animation-delay:-0.6s"/>
+  <circle cx="187" cy="196" r="1.2" fill="#f4f4ee" opacity="0.7"/>
+  <circle cx="104" cy="254" r="0.8" fill="#f4f4ee" opacity="0.9"/>
+  <circle cx="675" cy="385" r="0.8" fill="#dfe2ee" opacity="0.5" class="t" style="animation-duration:3.6s;animation-delay:-7.6s"/>
+  <circle cx="475" cy="76" r="1.0" fill="#dfe2ee" opacity="0.35"/>
+  <circle cx="82" cy="440" r="1.0" fill="#ffffff" opacity="0.7"/>
+  <circle cx="487" cy="261" r="1.2" fill="#dfe2ee" opacity="0.5" class="t" style="animation-duration:7.2s;animation-delay:-7.9s"/>
+  <circle cx="767" cy="419" r="0.8" fill="#ffffff" opacity="0.5"/>
+  <circle cx="26" cy="15" r="0.7" fill="#f4f4ee" opacity="0.9"/>
+  <circle cx="310" cy="420" r="1.2" fill="#f4f4ee" opacity="0.7" class="t" style="animation-duration:3.9s;animation-delay:-0.8s"/>
+  <circle cx="423" cy="176" r="0.8" fill="#f4f4ee" opacity="0.35"/>
+  <circle cx="579" cy="434" r="0.5" fill="#dfe2ee" opacity="0.9"/>
+  <circle cx="161" cy="410" r="0.7" fill="#dfe2ee" opacity="0.35" class="t" style="animation-duration:5.3s;animation-delay:-3.2s"/>
+  <circle cx="852" cy="377" r="0.6" fill="#ffffff" opacity="0.5"/>
+  <circle cx="726" cy="76" r="1.0" fill="#dfe2ee" opacity="0.9"/>
+  <circle cx="493" cy="11" r="1.2" fill="#dfe2ee" opacity="0.35" class="t" style="animation-duration:6.9s;animation-delay:-1.1s"/>
+  <circle cx="888" cy="101" r="0.6" fill="#f4f4ee" opacity="0.35"/>
+  <circle cx="687" cy="170" r="1.0" fill="#ffffff" opacity="0.9"/>
+  <circle cx="808" cy="344" r="1.0" fill="#dfe2ee" opacity="0.9" class="t" style="animation-duration:4.1s;animation-delay:-1.2s"/>
+  <circle cx="459" cy="454" r="0.6" fill="#ffffff" opacity="0.35"/>
+  <circle cx="653" cy="289" r="0.7" fill="#ffffff" opacity="0.9"/>
+  <circle cx="172" cy="22" r="0.5" fill="#dfe2ee" opacity="0.9" class="t" style="animation-duration:3.6s;animation-delay:-7.2s"/>
+  <circle cx="57" cy="169" r="1.0" fill="#dfe2ee" opacity="0.5"/>
+  <circle cx="727" cy="264" r="0.6" fill="#dfe2ee" opacity="0.7"/>
+  <circle cx="403" cy="217" r="0.8" fill="#f4f4ee" opacity="0.9" class="t" style="animation-duration:3.8s;animation-delay:-1.9s"/>
+</svg>
